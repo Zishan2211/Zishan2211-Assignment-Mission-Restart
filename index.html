@@ -245,18 +245,36 @@
 
         <!-- All products section start -->
 
-        <section id="all-products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-10 px-6">
+        <section id="all-products-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-10 px-6">
 
         </section>
 
         <!-- All products section end -->
 
 
+        <!-- Open the modal using ID.showModal() method start-->
+        <div>
+            <!-- <button class="btn">open modal</button> -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div id="details-box" class="modal-box">
+                    <h3 class="text-lg font-bold">Hello!</h3>
+                    <p class="py-4">Press ESC key or click the button below to close</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+        <!-- Open the modal using ID.showModal() method end-->
 
 
     </body>
 
-    <!-- Footer Section Start end -->
+    <!-- Footer Section Start -->
     <section>
         <footer
             class="mt-26 footer lg:flex justify-between sm:footer-horizontal text-gray-400 bg-[#1E293B] text-base-content p-10">
