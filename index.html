@@ -23,16 +23,16 @@
 <body>
     <header>
         <!-- navbar section start -->
-        <div class="navbar bg-base-100 shadow-sm">
+        <div id="" class="navbar bg-base-100 shadow-sm">
             <div class="navbar-start">
                 <a class="btn btn-ghost text-xl text-blue-600">SwiftCart</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li class="hover:text-blue-800"><a>Home</a></li>
-                    <li class="hover:text-blue-800"><a>Products</a></li>
-                    <li class="hover:text-blue-800"><a>About</a></li>
-                    <li class="hover:text-blue-800"><a>Contact</a></li>
+                    <li><a href="#" onclick="showHome()">Home</a></li>
+                    <li><a href="#" onclick="showProducts()">Products</a></li>
+                    <li><a href="#" onclick="showHome()">About</a></li>
+                    <li><a href="#" onclick="showHome()">Contact</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -58,199 +58,213 @@
         </div>
         <!-- navbar section end -->
 
-        <!-- banner section start -->
-        <section class="hidden relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
+        <section id="home-section">
+            <!-- banner section start -->
+            <section class="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
 
-            <img src="./Assets/banner-image.png" class="absolute inset-0 w-full h-full object-cover">
 
-            <div class="absolute inset-0 bg-black/60"></div>
-            <div class="relative z-10 flex items-center h-full">
-                <div class="px-6 sm:px-10 lg:px-8 max-w-xl text-white">
-                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                        Best Collection For You
-                    </h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-gray-200 mb-6">
-                        Discover the latest trends in fashion, electronics, and more.
-                        Shop with confidence and style at SwiftCart.
-                    </p>
-                    <button
-                        class="bg-blue-700 hover:bg-blue-900 transition px-6 py-3 rounded-lg text-white font-semibold">
-                        Shop Now
-                    </button>
+                <img src="./Assets/banner-image.png" class="absolute inset-0 w-full h-full object-cover">
+
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="relative z-10 flex items-center h-full">
+                    <div class="px-6 sm:px-10 lg:px-8 max-w-xl text-white">
+                        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                            Best Collection For You
+                        </h1>
+                        <p class="text-sm sm:text-base lg:text-lg text-gray-200 mb-6">
+                            Discover the latest trends in fashion, electronics, and more.
+                            Shop with confidence and style at SwiftCart.
+                        </p>
+                        <button onclick="showProducts()"
+                            class="bg-blue-700 hover:bg-blue-900 transition px-6 py-3 rounded-lg text-white font-semibold">
+                            Shop Now
+                        </button>
+                    </div>
                 </div>
-            </div>
 
+            </section>
+            <!-- banner section end -->
+            <!-- Why Choose Us Section Start -->
+            <section>
+                <h2 class="text-3xl text-center mt-12 font-bold mb-4">Why Choose Us</h2>
+                <p class="text-center text-gray-400 mb- 20sm:text-wrap px-6 mb-20">We provide the best shopping
+                    experience
+                    with
+                    top-notch services.</p>
+
+                <div class="relative grid grid-cols-1 sm:grid-cols-2 mb-10 lg:grid-cols-4 gap-6 mt-8 px-6">
+                    <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
+                        <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
+                            <div class="text-blue-700"><i class="fas fa-truck-moving"></i></div>
+                        </div>
+                        <h3 class="text-start text-xl font-semibold mt-4 mb-4">Fast Shipping</h3>
+                        <p class="text-gray-600 text-start  ">Get your orders delivered quickly and reliably.</p>
+                    </div>
+
+                    <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
+                        <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
+                            <div class="text-blue-700"><i class="fas fa-headphones"></i></div>
+                        </div>
+                        <h3 class="text-start text-xl font-semibold mt-4 mb-4">24/7 Support</h3>
+                        <p class="text-gray-600 text-start  ">Our support team is available around the clock to assist
+                            you.
+                        </p>
+                    </div>
+
+                    <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
+                        <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
+                            <div class="text-blue-700"><i class="fa-solid fa-house-circle-check"></i></div>
+                        </div>
+                        <h3 class="text-start text-xl font-semibold mt-4 mb-4">Secure Payment</h3>
+                        <p class="text-gray-600 text-start  ">Experience safe and secure transitions with our
+                            encrypted payment system.</p>
+                    </div>
+
+                    <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
+                        <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
+                            <div class="text-blue-700"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                        </div>
+                        <h3 class="text-start text-xl font-semibold mt-4 mb-4">Easy Returns</h3>
+                        <p class="text-gray-600 text-start">Not Satisfied? Return Your Products Easily within 30 Days.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+            <!-- why choose us section end -->
+
+            <!-- Trending Now section start -->
+            <section>
+                <div class="text-2xl font-bold mb-8 mx-4 sm:flex text-center">Trending Now</div>
+                <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+
+                    <div class="card w-80 bg-base-100 shadow-xl">
+                        <div class="p-6 h-3/4 flex justify-center bg-gray-200">
+                            <img class="h-3/4" src="./Assets/t-shart-trandingNow.jpeg " alt="" />
+                        </div>
+                        <div class="card-body space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
+                                    Men's Clothing
+                                </span>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i>
+                                    <span>3.9</span>
+                                    <span class="text-gray-400">(120)</span>
+                                </div>
+                            </div>
+
+                            <h2 class="text-1xl font-semibold">
+                                Fallraven - Foldsack No. 1 Backpack
+                            </h2>
+
+                            <p class="text-xl font-bold">$109.95</p>
+                            <div class="card-actions justify-between pt-2">
+                                <button class="btn btn-outline btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <button class="btn btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-cart-shopping"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card w-80 bg-base-100 shadow-xl">
+                        <div class="p-6 h-3/4 flex justify-center bg-gray-200">
+                            <img class="h-3/4" src="./Assets/bag_trangingNow.jpg" alt="" />
+                        </div>
+                        <div class="card-body space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
+                                    Men's Clothing
+                                </span>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i>
+                                    <span>4.2</span>
+                                    <span class="text-gray-400">(70)</span>
+                                </div>
+                            </div>
+
+                            <h2 class="text-1xl font-semibold">
+                                Bag Lorem ipsum dolor sit amet.
+                            </h2>
+
+                            <p class="text-xl font-bold">$299.99</p>
+                            <div class="card-actions justify-between pt-2">
+                                <button class="btn btn-outline btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <button class="btn btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-cart-shopping"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card w-80 bg-base-100 shadow-xl">
+                        <div class="p-6 h-3/4 flex justify-center bg-gray-200">
+                            <img class="h-3/4" src="./Assets/shart-trandingnow.webp" alt="" />
+                        </div>
+                        <div class="card-body space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
+                                    Men's Clothing
+                                </span>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i>
+                                    <span>4.6</span>
+                                    <span class="text-gray-400">(28)</span>
+                                </div>
+                            </div>
+
+                            <h2 class="text-1xl font-semibold">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repudiandae.
+                            </h2>
+
+                            <p class="text-xl font-bold">$139.99</p>
+                            <div class="card-actions justify-between pt-2">
+                                <button class="btn btn-outline btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <button class="btn btn-primary h-8 w-32">
+                                    <i class="fa-solid fa-cart-shopping"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- Trending Nowsection end -->
         </section>
-        <!-- banner section end -->
     </header>
 
-    <body>
-        <!-- Why Choose Us Section Start -->
-        <section class="hidden">
-            <h2 class="text-3xl text-center mt-12 font-bold mb-4">Why Choose Us</h2>
-            <p class="text-center text-gray-400 mb- 20sm:text-wrap px-6 mb-20">We provide the best shopping experience
-                with
-                top-notch services.</p>
-
-            <div class="relative grid grid-cols-1 sm:grid-cols-2 mb-10 lg:grid-cols-4 gap-6 mt-8 px-6">
-                <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
-                    <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
-                        <div class="text-blue-700"><i class="fas fa-truck-moving"></i></div>
-                    </div>
-                    <h3 class="text-start text-xl font-semibold mt-4 mb-4">Fast Shipping</h3>
-                    <p class="text-gray-600 text-start  ">Get your orders delivered quickly and reliably.</p>
-                </div>
-
-                <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
-                    <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
-                        <div class="text-blue-700"><i class="fas fa-headphones"></i></div>
-                    </div>
-                    <h3 class="text-start text-xl font-semibold mt-4 mb-4">24/7 Support</h3>
-                    <p class="text-gray-600 text-start  ">Our support team is available around the clock to assist you.
-                    </p>
-                </div>
-
-                <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
-                    <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
-                        <div class="text-blue-700"><i class="fa-solid fa-house-circle-check"></i></div>
-                    </div>
-                    <h3 class="text-start text-xl font-semibold mt-4 mb-4">Secure Payment</h3>
-                    <p class="text-gray-600 text-start  ">Experience safe and secure transitions with our
-                        encrypted payment system.</p>
-                </div>
-
-                <div class="relative mb-10 bg-white rounded-lg shadow-xl      inset-shadow-sm p-6 text-center">
-                    <div class="absolute -top-8 left-10 bg-white p-4 rounded-xl shadow">
-                        <div class="text-blue-700"><i class="fa-solid fa-arrow-rotate-left"></i></div>
-                    </div>
-                    <h3 class="text-start text-xl font-semibold mt-4 mb-4">Easy Returns</h3>
-                    <p class="text-gray-600 text-start">Not Satisfied? Return Your Products Easily within 30 Days.</p>
-                </div>
-            </div>
-
-        </section>
-        <!-- why choose us section end -->
-
-        <!-- Trending Now section start -->
-        <section class="hidden">
-            <div class="text-2xl font-bold mb-8 mx-4 sm:flex text-center">Trending Now</div>
-            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-
-                <div class="card w-80 bg-base-100 shadow-xl">
-                    <div class="p-6 h-3/4 flex justify-center bg-gray-200">
-                        <img class="h-3/4" src="./Assets/t-shart-trandingNow.jpeg " alt="" />
-                    </div>
-                    <div class="card-body space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
-                                Men's Clothing
-                            </span>
-                            <div class="flex items-center gap-1 text-sm">
-                                <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i> <span>3.9</span>
-                                <span class="text-gray-400">(120)</span>
-                            </div>
-                        </div>
-
-                        <h2 class="text-1xl font-semibold">
-                            Fallraven - Foldsack No. 1 Backpack
-                        </h2>
-
-                        <p class="text-xl font-bold">$109.95</p>
-                        <div class="card-actions justify-between pt-2">
-                            <button class="btn btn-outline btn-primary h-8 w-32">
-                                <i class="fa-solid fa-eye"></i> Details
-                            </button>
-                            <button class="btn btn-primary h-8 w-32">
-                                <i class="fa-solid fa-cart-shopping"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card w-80 bg-base-100 shadow-xl">
-                    <div class="p-6 h-3/4 flex justify-center bg-gray-200">
-                        <img class="h-3/4" src="./Assets/bag_trangingNow.jpg" alt="" />
-                    </div>
-                    <div class="card-body space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
-                                Men's Clothing
-                            </span>
-                            <div class="flex items-center gap-1 text-sm">
-                                <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i> <span>4.2</span>
-                                <span class="text-gray-400">(70)</span>
-                            </div>
-                        </div>
-
-                        <h2 class="text-1xl font-semibold">
-                            Bag Lorem ipsum dolor sit amet.
-                        </h2>
-
-                        <p class="text-xl font-bold">$299.99</p>
-                        <div class="card-actions justify-between pt-2">
-                            <button class="btn btn-outline btn-primary h-8 w-32">
-                                <i class="fa-solid fa-eye"></i> Details
-                            </button>
-                            <button class="btn btn-primary h-8 w-32">
-                                <i class="fa-solid fa-cart-shopping"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card w-80 bg-base-100 shadow-xl">
-                    <div class="p-6 h-3/4 flex justify-center bg-gray-200">
-                        <img class="h-3/4" src="./Assets/shart-trandingnow.webp" alt="" />
-                    </div>
-                    <div class="card-body space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-blue-300 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
-                                Men's Clothing
-                            </span>
-                            <div class="flex items-center gap-1 text-sm">
-                                <i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i> <span>4.6</span>
-                                <span class="text-gray-400">(28)</span>
-                            </div>
-                        </div>
-
-                        <h2 class="text-1xl font-semibold">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repudiandae.
-                        </h2>
-
-                        <p class="text-xl font-bold">$139.99</p>
-                        <div class="card-actions justify-between pt-2">
-                            <button class="btn btn-outline btn-primary h-8 w-32">
-                                <i class="fa-solid fa-eye"></i> Details
-                            </button>
-                            <button class="btn btn-primary h-8 w-32">
-                                <i class="fa-solid fa-cart-shopping"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <!-- Trending Nowsection end -->
-
-
+    <main>
         <!-- All Categories section start -->
-        <section>
+        <section id="products-section" class="hidden">
             <h2 class="text-3xl font-bold flex justify-center mt-10">Our Products</h2>
+
             <div id="all-categories-container" class=" flex justify-center gap-6 mt-6 flex-wrap">
-                <button class="btn btn-active btn-outline btn-primary rounded-full">All</button>
+                <button id="btn-category-all" class="btn btn-active btn-outline btn-primary rounded-full">All</button>
+
             </div>
         </section>
         <!-- All Categories section end -->
 
 
-        <!-- All products section start -->
 
-        <section id="all-products-container"
+        <!-- all products-container section start -->
+
+        <!-- all products-container section end -->
+
+
+
+        <!-- category-products-container section start -->
+        <section id="category-products-container"
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-10 px-6">
 
         </section>
-
-        <!-- All products section end -->
+        <!-- category-products-container section end -->
 
 
         <!-- Open the modal using ID.showModal() method start-->
@@ -272,7 +286,7 @@
         <!-- Open the modal using ID.showModal() method end-->
 
 
-    </body>
+    </main>
 
     <!-- Footer Section Start -->
     <section>

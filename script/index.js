@@ -1,3 +1,15 @@
+const showHome = () => {
+    document.getElementById("products-section").classList.add("hidden");
+    document.getElementById("home-section").classList.remove("hidden");
+};
+
+const showProducts = () => {
+    document.getElementById("home-section").classList.add("hidden");
+    document.getElementById("products-section").classList.remove("hidden");
+};
+
+
+
 const loadCategories = () => {
     fetch("https://fakestoreapi.com/products")
         .then(res => res.json())
@@ -13,20 +25,22 @@ const filterProducts = (category) => {
     const url = `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`;  //I did some research and apply...
     fetch(url)
         .then(res => res.json())
-        .then(data => {
+        .then(products => {
+
             removeActive();
             const clickBtn = document.getElementById(`btn-category-${category}`);
             clickBtn.classList.add("btn-active");
-            displayProducts(data)
+            displayProducts(products)
         })
 };
 
 const showDetailsModal = (id) => {
-    const url = `https://fakestoreapi.com/products/${id}`
-    displyShowDetailsModal(url);
+    const url = `https://fakestoreapi.com/products/${id}`;
+    displayShowDetailsModal(url);
 }
 
-const displyShowDetailsModal = (data) => {
+const displayShowDetailsModal = (data) => {
+    console.log(data);
     const detailsbox = document.getElementById("details-box");
     detailsbox.innerHTML = `${data}
     <div class="modal-action">
@@ -39,10 +53,8 @@ const displyShowDetailsModal = (data) => {
 
 }
 
-
-
 const displayProducts = (products) => {
-    const productContainer = document.getElementById("all-products-container");
+    const productContainer = document.getElementById("category-products-container");
     productContainer.innerHTML = "";
 
     products.forEach((product) => {
@@ -83,13 +95,15 @@ const displayProducts = (products) => {
     })
 };
 
+
+
 const displaycategories = (data) => {
     const categories = data.map(item => item.category);
     const SetCategories = [...new Set(categories)];
     const container = document.getElementById("all-categories-container");
     // container.innerHTML = "";
 
-    SetCategories.forEach(category => {
+    SetCategories.forEach((category) => {
         const btnDiv = document.createElement("div");
         btnDiv.innerHTML = `
     <button id="btn-category-${category}" onclick="filterProducts(\`${category}\`)"
